@@ -1,5 +1,52 @@
-$primary-color: #444;
+$primary-color: #fff;
+$secondary-color: #f2f1f4;
+$text-color: #5d5d5d;
+$accent-color: #4ca3dd;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+header {
   background-color: $primary-color;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo a {
+    font-size: 60px;
+    color: $accent-color;
+  }
+
+  nav li {
+    display: inline;
+    font-size: 18px;
+    margin-right: 60px;
+
+    a:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  header nav li {
+    display: block;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
 }
