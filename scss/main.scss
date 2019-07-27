@@ -3,6 +3,10 @@ $secondary-color: #f2f1f4;
 $text-color: #5d5d5d;
 $accent-color: #4ca3dd;
 
+@mixin easeOutTransition {
+  transition: all 0.5s ease-out;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,6 +35,11 @@ header {
   .logo a {
     font-size: 60px;
     color: $accent-color;
+
+    &:hover {
+      color: $text-color;
+      @include easeOutTransition();
+    }
   }
 
   nav li {
@@ -40,6 +49,7 @@ header {
 
     a:hover {
       color: $accent-color;
+      @include easeOutTransition();
     }
   }
 }
@@ -51,6 +61,8 @@ header {
     margin-top: 10px;
   }
 }
+
+/* Hero Section Styles */
 
 .hero {
   background-color: $primary-color;
@@ -75,12 +87,31 @@ header {
 
     a {
       color: $accent-color;
+
+      &:hover {
+        color: $text-color;
+        @include easeOutTransition();
+      }
     }
   }
 
   h3 {
     font-size: 22px;
     margin-bottom: 20px;
+  }
+
+  i.fab {
+    font-size: 60px;
+    margin-right: 30px;
+
+    .hidden {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
   }
 }
 
@@ -102,6 +133,11 @@ header {
       font-size: 18px;
       margin-bottom: 20px;
     }
+
+    i.fab {
+      font-size: 45px;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -122,6 +158,10 @@ header {
     h3 {
       font-size: 16px;
       margin-bottom: 15px;
+    }
+
+    i.fab {
+      margin-bottom: 20px;
     }
   }
 }
