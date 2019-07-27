@@ -11,6 +11,7 @@ $accent-color: #4ca3dd;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: $text-color;
 }
 
 a {
@@ -48,5 +49,79 @@ header {
     display: block;
     margin-right: 30px;
     margin-top: 10px;
+  }
+}
+
+.hero {
+  background-color: $primary-color;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  h1,
+  h2 {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 46px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 100px;
+    max-width: 80%;
+
+    a {
+      color: $accent-color;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .hero {
+    padding: 30px 0;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+      max-width: 85%;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    padding: 20px 0;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+      max-width: 90%;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
   }
 }
