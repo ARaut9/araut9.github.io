@@ -104,3 +104,64 @@ header {
       margin-bottom: 15px; }
     .hero i.fab {
       margin-bottom: 20px; } }
+
+/* Portfolio Section Styles */
+#portfolio {
+  background-color: #f2f1f4;
+  text-align: center;
+  padding: 120px 0; }
+  #portfolio h2 {
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 40px; }
+
+.projects-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .projects-container .project {
+    width: calc(calc(100% - 50px) / 3);
+    margin-right: 25px;
+    margin-bottom: 25px;
+    background-color: #4ca3dd;
+    text-align: center; }
+    .projects-container .project:nth-of-type(3n) {
+      margin-right: 0; }
+    .projects-container .project .project-img {
+      max-width: 75%;
+      height: auto;
+      margin: 20px 0; }
+    .projects-container .project .project-name {
+      padding: 15px;
+      background-color: #fff;
+      font-size: 16px;
+      text-transform: uppercase; }
+
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  #portfolio {
+    padding: 80px 0; }
+    #portfolio h2 {
+      font-size: 27px;
+      padding-bottom: 30px; }
+  .projects-container {
+    flex-wrap: wrap; }
+    .projects-container .project {
+      width: calc(calc(100% - 50px) / 2); }
+      .projects-container .project:nth-of-type(2n) {
+        margin-right: 0; }
+      .projects-container .project:nth-of-type(3n) {
+        margin-right: 25px; } }
+
+@media screen and (max-width: 600px) {
+  #portfolio {
+    padding: 60px 0; }
+    #portfolio h2 {
+      font-size: 25px;
+      padding-bottom: 25px; }
+  .projects-container {
+    flex-wrap: wrap; }
+    .projects-container .project {
+      width: 100%;
+      margin-right: 0; } }
