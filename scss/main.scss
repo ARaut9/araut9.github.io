@@ -193,6 +193,9 @@ header {
     margin-bottom: 25px;
     background-color: $accent-color;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     &:nth-of-type(3n) {
       margin-right: 0;
@@ -210,10 +213,59 @@ header {
       font-size: 16px;
       text-transform: uppercase;
     }
+
+    & > div {
+      position: relative;
+      height: 100%;
+
+      .img-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($accent-color, 0.9);
+        @include easeOutTransition();
+
+        div {
+          display: block;
+        }
+      }
+    }
+
+    .overlay div {
+      display: none;
+      width: 70%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 20px;
+      background-color: $primary-color;
+
+      a:hover {
+        color: $accent-color;
+        @include easeOutTransition();
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 601px) {
+@media screen and (max-width: 1080px) and (min-width: 601px) {
   #portfolio {
     padding: 80px 0;
 
@@ -236,6 +288,11 @@ header {
       &:nth-of-type(3n) {
         margin-right: 25px;
       }
+
+      .overlay div {
+        font-size: 16px;
+        padding: 6px;
+      }
     }
   }
 }
@@ -256,6 +313,11 @@ header {
     .project {
       width: 100%;
       margin-right: 0;
+
+      .overlay div {
+        font-size: 16px;
+        padding: 10px;
+      }
     }
   }
 }

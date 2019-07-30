@@ -126,7 +126,10 @@ header {
     margin-right: 25px;
     margin-bottom: 25px;
     background-color: #4ca3dd;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
     .projects-container .project:nth-of-type(3n) {
       margin-right: 0; }
     .projects-container .project .project-img {
@@ -138,8 +141,42 @@ header {
       background-color: #fff;
       font-size: 16px;
       text-transform: uppercase; }
+    .projects-container .project > div {
+      position: relative;
+      height: 100%; }
+      .projects-container .project > div .img-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .projects-container .project > div:hover .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(76, 163, 221, 0.9);
+        transition: all 0.5s ease-out; }
+        .projects-container .project > div:hover .overlay div {
+          display: block; }
+    .projects-container .project .overlay div {
+      display: none;
+      width: 70%;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 20px;
+      background-color: #fff; }
+      .projects-container .project .overlay div a:hover {
+        color: #4ca3dd;
+        transition: all 0.5s ease-out; }
+      .projects-container .project .overlay div i {
+        margin-right: 5px; }
 
-@media screen and (max-width: 1024px) and (min-width: 601px) {
+@media screen and (max-width: 1080px) and (min-width: 601px) {
   #portfolio {
     padding: 80px 0; }
     #portfolio h2 {
@@ -152,7 +189,10 @@ header {
       .projects-container .project:nth-of-type(2n) {
         margin-right: 0; }
       .projects-container .project:nth-of-type(3n) {
-        margin-right: 25px; } }
+        margin-right: 25px; }
+      .projects-container .project .overlay div {
+        font-size: 16px;
+        padding: 6px; } }
 
 @media screen and (max-width: 600px) {
   #portfolio {
@@ -164,4 +204,7 @@ header {
     flex-wrap: wrap; }
     .projects-container .project {
       width: 100%;
-      margin-right: 0; } }
+      margin-right: 0; }
+      .projects-container .project .overlay div {
+        font-size: 16px;
+        padding: 10px; } }
