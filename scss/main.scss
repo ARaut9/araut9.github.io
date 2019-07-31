@@ -321,3 +321,90 @@ header {
     }
   }
 }
+
+/* Contact Section Styles */
+
+.contact {
+  background-color: $primary-color;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+    a {
+      color: $accent-color;
+
+      &:hover {
+        color: $text-color;
+        @include easeOutTransition();
+      }
+    }
+  }
+
+  .contacts {
+    font-size: 36px;
+
+    a {
+      margin-right: 40px;
+
+      &:hover {
+        color: $accent-color;
+        @include easeOutTransition();
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) and (min-width: 601px) {
+  .contact {
+    padding: 60px 0;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 35px;
+    }
+
+    .contacts {
+      font-size: 26px;
+
+      a {
+        margin-right: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 30px 0;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .contacts {
+      font-size: 20px;
+
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+
+  small {
+    font-size: 12px;
+  }
+}
