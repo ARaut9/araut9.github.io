@@ -3,9 +3,9 @@ $secondary-color: #f2f1f4;
 $text-color: #5d5d5d;
 $accent-color: #4ca3dd;
 
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "font-awesome/scss/fontawesome.scss";
+@import "font-awesome/scss/solid.scss";
+@import "font-awesome/scss/brands.scss";
 
 @mixin easeOutTransition {
   transition: all 0.5s ease-out;
