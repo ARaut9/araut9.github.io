@@ -4384,6 +4384,27 @@ a {
   color: #5d5d5d;
   text-decoration: none; }
 
+.heading-secondary {
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 40px; }
+
+@media screen and (max-width: 1080px) {
+  .heading-secondary {
+    font-size: 27px;
+    padding-bottom: 30px; } }
+
+@media screen and (max-width: 600px) {
+  .heading-secondary {
+    font-size: 25px;
+    padding-bottom: 25px; } }
+
+@media screen and (max-width: 400px) {
+  .heading-secondary {
+    font-size: 23px;
+    padding-bottom: 20px; } }
+
 header {
   background-color: #fff;
   max-width: 90%;
@@ -4478,16 +4499,85 @@ header {
     .hero i.fab {
       margin-bottom: 20px; } }
 
+/* Skills Section Styles */
+.skills {
+  text-align: center;
+  padding-bottom: 80px; }
+  .skills .boxes-container {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto; }
+  .skills .skill-box {
+    width: 33.3333%;
+    margin-right: 30px;
+    padding: 10px 0;
+    background-color: #f2f1f4;
+    list-style: none; }
+    .skills .skill-box li {
+      display: flex;
+      align-items: center;
+      margin: 15px 40px; }
+      .skills .skill-box li:first-of-type {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0; }
+  .skills .skill-logo {
+    width: 30px;
+    margin-right: 40px; }
+
+@media screen and (max-width: 1080px) {
+  .skills {
+    padding-bottom: 60px; }
+    .skills .boxes-container {
+      flex-wrap: wrap; }
+    .skills .skill-box {
+      width: 100%;
+      padding: 10px 0;
+      margin: 0;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap; }
+      .skills .skill-box li {
+        margin: 15px 20px;
+        width: calc(33.33333% - 40px); }
+        .skills .skill-box li:first-of-type {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+          width: 100%; }
+    .skills .skill-logo {
+      width: 25px;
+      margin-right: 20px; } }
+
+@media screen and (max-width: 600px) {
+  .skills {
+    margin-bottom: 40px; }
+    .skills .skill-box li {
+      width: calc(50% - 60px);
+      margin: 10px 30px;
+      font-size: 14px; }
+      .skills .skill-box li:first-of-type {
+        margin: 10px 0; }
+    .skills .skill-logo {
+      width: 20px;
+      margin-right: 15px; } }
+
+@media screen and (max-width: 400px) {
+  .skills {
+    margin-bottom: 30px; }
+    .skills .skill-box li {
+      width: calc(50% - 40px);
+      margin: 10px 20px;
+      font-size: 13px; }
+    .skills .skill-logo {
+      width: 18px;
+      margin-right: 10px; } }
+
 /* Portfolio Section Styles */
 #portfolio {
   background-color: #f2f1f4;
   text-align: center;
   padding: 120px 0; }
-  #portfolio h2 {
-    font-size: 35px;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-bottom: 40px; }
 
 .projects-container {
   max-width: 90%;
